@@ -16,7 +16,13 @@ preco = 10.0
 comando = f'INSERT INTO vendas(nmProduto, preco) VALUES ("{nmProduto}", "{preco}")'
 cursor.execute(comando)
 conexao.commit() # Edita o banco de dados -> INSERT
+
 #READ
+comando = f'SELECT * FROM vendas'
+cursor.execute(comando)
+resultado = cursor.fetchall() # Ler o banco de dados
+print(resultado)
+
 #UPDATE 
 preco = 11.0
 comando = f'UPDATE vendas SET preco = "{preco}"'
